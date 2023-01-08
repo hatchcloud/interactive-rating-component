@@ -1,0 +1,28 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:where(.visually-hidden:not(:focus, :active, :focus-within, .not-visually-hidden)) {
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+:where(img, svg, video, canvas, audio, iframe, embed, object) {
+    display: block;
+}
+
+:where(img, picture, svg) {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+:where(img, svg, video, canvas, audio, iframe, embed, object) {
+    display: block;
+}
